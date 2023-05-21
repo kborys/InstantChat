@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="InstantChat.Desktop.Avalonia/App.axaml" value="InstantChat.Desktop.Avalonia/InstantChat.Desktop.Avalonia.csproj" />
+        <entry key="InstantChat.Desktop.Avalonia/Views/MainWindow.axaml" value="InstantChat.Desktop.Avalonia/InstantChat.Desktop.Avalonia.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,89 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:InstantChat.Desktop.Avalonia.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="InstantChat.Desktop.Avalonia.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="InstantChat">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Grid ColumnDefinitions="auto, *" Background="#ffffff">
+        <!-- Menu wyboru konwersacji -->
+        <Grid Grid.Column="0" RowDefinitions="Auto, *" Width="250" Margin="8 0">
+            <!-- Nagłówek -->
+            <Grid Grid.Row="0" ColumnDefinitions="*, Auto" Margin="0 8">
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                    <Label FontWeight="Black">Czaty</Label>
+                </StackPanel>
+                <Rectangle Grid.Column="1" Width="40" Height="40" Fill="Black"></Rectangle>
+            </Grid>
+            
+            <!-- Konwersacje -->
+            <ScrollViewer Grid.Row="1">
+                <!-- Konwersacja -->
+                <StackPanel>
+                    <Grid ColumnDefinitions="auto, *" Margin="0,0,0,5">
+                        <!-- Zdjęcie -->
+                        <Rectangle Grid.Column="0" Fill="Black" Width="50" Height="50"></Rectangle>
+                        <!-- Dane osobowe -->
+                        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <Label FontWeight="Black">Konrad Boryś</Label>
+                            <Label>Wiadomość</Label>
+                        </StackPanel>
+                    </Grid>
+                    
+                    <Grid ColumnDefinitions="auto, *" Margin="0,0,0,5">
+                        <!-- Zdjęcie -->
+                        <Rectangle Grid.Column="0" Fill="Black" Width="50" Height="50"></Rectangle>
+                        <!-- Dane osobowe -->
+                        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <Label FontWeight="Black">Konrad Boryś</Label>
+                            <Label>Wiadomość</Label>
+                        </StackPanel>
+                    </Grid>
+                    
+                    <Grid ColumnDefinitions="auto, *" Margin="0,0,0,5">
+                        <!-- Zdjęcie -->
+                        <Rectangle Grid.Column="0" Fill="Black" Width="50" Height="50"></Rectangle>
+                        <!-- Dane osobowe -->
+                        <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <Label FontWeight="Black">Konrad Boryś</Label>
+                            <Label>Wiadomość</Label>
+                        </StackPanel>
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Border Grid.Column="0" BorderThickness="0 0 .5 0 " BorderBrush="Gray"></Border>
+        
+        <!-- Szczegóły konwersacji -->
+        <Grid Grid.Column="1" RowDefinitions="auto, *, auto">
+            <!-- Nagłówek konwersacji -->
+            <Grid Grid.Row="0" ColumnDefinitions="Auto, *, auto" Margin="8">
+                <StackPanel Grid.Column="0" Orientation="Horizontal">
+                    <Rectangle Width="40" Height="40" Fill="Red"></Rectangle>
+                    <Label Margin="8 0 0 0">Konrad Boryś</Label>
+                </StackPanel>
+            </Grid>
+            <Border Grid.Row="0" BorderThickness="0 0 0 .5 " BorderBrush="Gray"></Border>
+
+            <!-- Konwersacja -->
+            <!-- <Rectangle Grid.Row="1" Fill="green"></Rectangle> -->
+            <!-- Pasek wiadomości -->
+            <Grid Grid.Row="2" ColumnDefinitions="Auto, *, auto" RowDefinitions="*, auto" Margin="8">
+                <Rectangle Grid.Column="0" Grid.Row="1" Height="35" Width="35" Fill="Red"></Rectangle>
+                <TextBox Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" TextWrapping="Wrap" MaxHeight="80" Margin="8 0" CornerRadius="20" BorderThickness="0" VerticalContentAlignment="Center" Background="#BCC0C4">Aa</TextBox>
+                <Rectangle Grid.Column="2" Grid.Row="1" Height="35" Width="35" Fill="Red"></Rectangle>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</Window>
